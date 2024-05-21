@@ -23,18 +23,43 @@ const ModalShow = ({ client, setShowClient }) => {
           &times;
         </button>
         <h2 className="text-xl font-bold mb-4">Mais informações</h2>
-        <div className="space-y-2">
-          <p><span className="font-bold">Nome:</span> {client.name}</p>
-          <p><span className="font-bold">Email:</span> {client.email}</p>
-          <p><span className="font-bold">Telefone:</span> {client.phone}</p>
-          <p className="truncate"><span className="font-bold">Observação:</span> {client.observation}</p>
-          <p><span className="font-bold">Rua:</span> {client.address.street}</p>
-          <p><span className="font-bold">Nº:</span> {client.address.number}</p>
-          <p><span className="font-bold">Bairro:</span> {client.address.neighborhood}</p>
-          <p><span className="font-bold">Complemento:</span> {client.address.complement}</p>
-          <p><span className="font-bold">Cidade:</span> {client.address.city}</p>
-          <p><span className="font-bold">Estado:</span> {client.address.state}</p>
-        </div>
+        {client && (
+          <div className="space-y-2">
+            <p>
+              <span className="font-bold">Nome:</span> {client.name}
+            </p>
+            <p>
+              <span className="font-bold">Email:</span> {client.email}
+            </p>
+            <p>
+              <span className="font-bold">Telefone:</span> {client.phone}
+            </p>
+            <p className="truncate">
+              <span className="font-bold">Observação:</span>{" "}
+              {client.observation}
+            </p>
+            <p>
+              <span className="font-bold">Rua:</span> {client.address.street}
+            </p>
+            <p>
+              <span className="font-bold">Nº:</span> {client.address.number}
+            </p>
+            <p>
+              <span className="font-bold">Bairro:</span>{" "}
+              {client.address.neighborhood}
+            </p>
+            <p>
+              <span className="font-bold">Complemento:</span>{" "}
+              {client.address.complement}
+            </p>
+            <p>
+              <span className="font-bold">Cidade:</span> {client.address.city}
+            </p>
+            <p>
+              <span className="font-bold">Estado:</span> {client.address.state}
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
