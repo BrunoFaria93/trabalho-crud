@@ -11,7 +11,6 @@
  *
  * Este script é parte o curso de ADS.
  */
-
    
 import { useEffect, useState } from "react";
 import { getClients } from "../services/clientService";
